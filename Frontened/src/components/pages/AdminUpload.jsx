@@ -16,7 +16,7 @@ function AdminUpload() {
       viewUrl: data.viewUrl
     };
     await axios
-      .post("http://localhost:4002/note/AdminUpload", info)
+      .post("https://dev-notes-e58e.vercel.app/note/AdminUpload", info)
       .then((res) => {
         console.log(res.data.message);
         toast.success("Uploaded Successfully");
