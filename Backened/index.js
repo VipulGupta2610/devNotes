@@ -9,7 +9,13 @@ import userRoute from "./route/user.route.js"
 
 
 const app = express()
-app.use(cors());
+app.use(cors({
+    origin:["http://localhost:4002",
+        "https://coruscating-shortbread-327efe.netlify.app",
+        "https://dev-notes-rouge.vercel.app/"
+    ]
+}
+));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
