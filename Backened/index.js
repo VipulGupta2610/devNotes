@@ -34,6 +34,12 @@ try {
 app.use("/note", noteRoute);
 app.use("/user", userRoute);
 
+app.get('/',(req,res)=>{
+res.send({
+    activeStatus:true,
+    error:false,
+})
+})
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
