@@ -24,7 +24,7 @@ function Anote() {
   useEffect(() => {
     const getNote = async () => {
       try {
-        const res = await axios.get("https://dev-notes-e58e.vercel.app/note");
+        const res = await axios.get("http://localhost:4002/note");
         console.log(res.data);
         setstore(res.data);
       } catch (error) {

@@ -17,7 +17,7 @@ export default function Signup() {
       email: data.email,
       password: data.password
     }
-    await axios.post("https://dev-notes-e58e.vercel.app/user/signup", userInfo)
+    await axios.post("http://localhost:4002/user/signup", userInfo)
       .then((res) => {
         console.log(res.data)
         if (res.data) {
